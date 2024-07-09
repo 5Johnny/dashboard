@@ -1,0 +1,161 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f6;
+    color: #333;
+    margin-top: -20px; /* Adjust this value as needed */
+}
+
+/* Title styling */
+h1 {
+    color: #30475e;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+/* Subheader styling */
+h2, h3, h4 {
+    color: #30475e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Sidebar styling */
+.stSidebar {
+    background-color: #30475e;
+    color: white;
+}
+
+.stSidebar .sidebar-content {
+    color: white;
+}
+
+.stSidebar .sidebar-content h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Filters styling */
+.stSelectbox, .stDateInput, .stMultiSelect {
+    margin: 15px 0;
+}
+
+.stSelectbox > div, .stDateInput > div, .stMultiSelect > div {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Metric cards styling */
+.metric-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.metric-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+}
+
+.metric-card h4 {
+    color: #30475e;
+    margin-bottom: 10px;
+}
+
+.metric-card div {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+/* Button styling */
+.stButton button {
+    background-color: #30475e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.stButton button:hover {
+    background-color: #3b4f6b;
+}
+
+/* Dataframe styling */
+.stDataFrame {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.stDataFrame table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.stDataFrame th, .stDataFrame td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.stDataFrame th {
+    background-color: #30475e;
+    color: white;
+}
+
+.stDataFrame tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Plotly chart styling */
+.stPlotlyChart .modebar {
+    display: none;
+}
+
+.stPlotlyChart .plot-container {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Main container styling */
+div.st-emotion-cache-1jicfl2.ea3mdgi5 {
+
+    padding: 1% 1% 1% 1%; /* Adjust the padding to make the container thinner */
+    border-radius: 5px;
+    text-align: center;
+    width: 95%; /* Adjust the width as needed */
+    margin: auto;
+}
+
+/* Additional padding for main container */
+.main {
+    padding: 10px;
+}
+
+div .st-emotion-cache-12w0qpk.e1f1d6gn3{
+background-color: rgba(220,220,220,0.6);
+padding: 3% 3% 3% 3%;
+border-radius: 5px;
+text-align: center;
+}
