@@ -1,0 +1,101 @@
+st.sidebar.header("Colour :smile:")
+    color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
+    selected_color_theme = st.sidebar.selectbox("Select a color theme", color_theme_list)
+    color_schemes = {
+        'blues': ['#f7fbff', '#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b'],
+        'cividis': ['#00204c', '#302a6b', '#64386b', '#9c5a73', '#cc8964', '#f0b256', '#fdda41'],
+        'greens': ['#f7fcf5', '#e5f5e0', '#c7e9c0', '#a1d99b', '#74c476', '#41ab5d', '#238b45', '#006d2c', '#00441b'],
+        'inferno': ['#000004', '#160b39', '#420a68', '#6a176e', '#932667', '#bc3754', '#dd513a', '#f3771b', '#fca50a'],
+        'magma': ['#000004', '#1d0a35', '#4f0c66', '#812581', '#b5367a', '#e55063', '#fb8761', '#fec287', '#f6efa6'],
+        'plasma': ['#0d0887', '#46039f', '#7201a8', '#9c179e', '#bd3786', '#d8576b', '#ed7953', '#fb9f3a', '#fdca26'],
+        'reds': ['#fff5f0', '#fee0d2', '#fcbba1', '#fc9272', '#fb6a4a', '#ef3b2c', '#cb181d', '#a50f15', '#67000d'],
+        'rainbow': ['#e70000', '#ff6900', '#ffdf00', '#94c11f', '#35a043', '#0d8c7f', '#0073cf', '#4d51d1', '#8e1bc4'],
+        'turbo': ['#23171b', '#4b1d38', '#772355', '#a52c6c', '#ce4073', '#ed5d68', '#fa8155', '#fba341', '#f8c230'],
+        'viridis': ['#440154', '#46337e', '#365c8d', '#277f8e', '#1fa187', '#4ac16d', '#a0da39', '#fde725']
+    }
+    selected_colors = color_schemes[selected_color_theme]
+    selected_color1 = selected_colors[2]
+    selected_color2 = selected_colors[4]
+
+    if st.button("Clear Filters"):
+        date_range = []
+        env_filter = []
+        status_filter = []
+
+
+
+# Prepare data for the scatter plot
+def prepare_scatter_data(df):
+    scatter_data = df.groupby('date_of_build').size().reset_index(name='build_count')
+    return scatter_data
+
+def create_scatter(df):
+    scatter_data = prepare_scatter_data(df)
+    ## Create scatter plot using Altair
+    scatter_plot = alt.Chart(scatter_data).mark_point(color=selected_color1).encode(
+        x=alt.X('date_of_build:T', title='Date'),
+        y=alt.Y('build_count:Q', title='Number of Builds'),
+        tooltip=['date_of_build:T', 'build_count:Q']
+    ).properties(
+        title='Number of Builds Over Time',
+        width=600,
+        height=400
+    )
+
+    # Add a smooth trendline using Loess smoothing
+    trendline = scatter_plot.transform_loess(
+        'date_of_build', 'build_count'
+    ).mark_line(color=selected_color2)
+
+    st.altair_chart(scatter_plot + trendline, use_container_width=True)
+
+
+# Count unique projects in 'dev' environment
+def count_new_projects(df, env):
+    dev_projects = df[df['environment'] == env]['projname'].nunique()
+    return dev_projects
+
+with col[0]:
+    successful_builds = filtered['status'].value_counts().get('Success', 0)
+    print(len(filtered))
+    st.title("Current")
+    st.markdown("#### Monthly Metrics")
+    st.metric("Successful Builds", successful_builds, "")
+    st.metric("New Projects in Dev", count_new_projects(filtered, 'dev'))
+    st.metric("New Projects in Prd", count_new_projects(filtered, 'prod'))
+    st.metric("New Projects in Stg", count_new_projects(filtered, 'stg'))
+    st.markdown("#### Cool Percentages")
+
+create_scatter(filtered)
+
+
+# Prepare data for the team usage chart
+def prepare_team_usage_data(df, n=10):
+    team_usage = df.groupby(['teamname', 'environment']).size().reset_index(name='count')
+    team_usage_pivot = team_usage.pivot(index='teamname', columns='environment', values='count').fillna(0)
+    team_usage_pivot['total'] = team_usage_pivot.sum(axis=1)
+    team_usage_sorted = team_usage_pivot.sort_values(by='total', ascending=False).reset_index().head(n)
+    return team_usage_sorted
+
+def team_usage_horizontal_bar_chart(df, n):
+    team_usage_data = prepare_team_usage_data(df, n)
+
+    # Melt the data for Altair
+    melted_team_usage = pd.melt(team_usage_data, id_vars=['teamname'], value_vars=['dev', 'stg', 'prod'], var_name='environment', value_name='count')
+
+    # Create the horizontal stacked bar chart
+    chart = (
+        alt.Chart(melted_team_usage)
+        .mark_bar()
+        .encode(
+            x=alt.X('count:Q', title=''),
+            y=alt.Y('teamname:N', title='Team', sort=alt.EncodingSortField(field='total', order='descending')),
+            color=alt.Color('environment:N', scale=alt.Scale(scheme=selected_color_theme), title='Environment'),
+            order=alt.Order('environment', sort='descending'),
+            tooltip=['teamname:N', 'environment:N', 'count:Q']
+        )
+        .properties(height=400)
+    )
+    return chart
+
+st.altair_chart(team_usage_horizontal_bar_chart(filtered, 10), use_container_width=True)
