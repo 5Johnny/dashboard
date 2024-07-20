@@ -1,3 +1,70 @@
+import pandas as pd
+import streamlit as st
+import altair as alt
+
+# Load data
+df = pd.read_csv('data/new_mock_data.csv', parse_dates=["date_of_build", "log_on", "log_off"], dayfirst=True)
+
+# Ensure date columns are correctly parsed
+df['date_of_build'] = pd.to_datetime(df['date_of_build'], errors='coerce').dt.date
+df['log_on'] = pd.to_datetime(df['log_on'], errors='coerce')
+df['log_off'] = pd.to_datetime(df['log_off'], errors='coerce')
+
+# Calculate time spent (in hours) for login-related rows
+df['time_spent'] = (df['log_off'] - df['log_on']).dt.total_seconds() / 3600
+df['time_spent'] = df['time_spent'].fillna(0)  # Replace NaNs with 0
+
+# Filter for build-related rows
+builds_df = df[df['log_on'].isna() & df['log_off'].isna()]
+
+# Calculate durations in each environment
+builds_df = builds_df.sort_values(by=['projname', 'date_of_build'])
+builds_df['next_env_date'] = builds_df.groupby('projname')['date_of_build'].shift(-1)
+builds_df['duration_in_env'] = (pd.to_datetime(builds_df['next_env_date']) - pd.to_datetime(builds_df['date_of_build'])).dt.days
+
+# Filter relevant columns
+builds_df = builds_df[['projname', 'environment', 'date_of_build', 'duration_in_env']]
+
+# Handle last stage durations as zero (since there's no next stage)
+builds_df['duration_in_env'] = builds_df['duration_in_env'].fillna(0).astype(int)
+
+# Calculate average, shortest, and longest times for each environment
+env_stats = builds_df.groupby('environment')['duration_in_env'].agg(['mean', 'min', 'max']).reset_index()
+env_stats.columns = ['environment', 'average_time', 'shortest_time', 'longest_time']
+
+# Visualize the progression and statistics for each environment
+progression_chart = alt.Chart(builds_df).mark_bar().encode(
+    x='projname:N',
+    y='duration_in_env:Q',
+    color='environment:N',
+    tooltip=['projname:N', 'environment:N', 'duration_in_env:Q']
+).properties(
+    title='Time Spent in Each Environment by Project',
+    width=700,
+    height=400
+)
+
+# Visualize average, shortest, and longest times for each environment
+stats_chart = alt.Chart(env_stats).transform_fold(
+    ['average_time', 'shortest_time', 'longest_time'],
+    as_=['statistic', 'value']
+).mark_bar().encode(
+    x='environment:N',
+    y='value:Q',
+    color='statistic:N',
+    tooltip=['environment:N', 'statistic:N', 'value:Q']
+).properties(
+    title='Average, Shortest, and Longest Time in Each Environment',
+    width=700,
+    height=400
+)
+
+# Display the charts in Streamlit
+st.altair_chart(progression_chart, use_container_width=True)
+st.altair_chart(stats_chart, use_container_width=True)
+
+
+
 st.sidebar.header("Colour :smile:")
     color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
     selected_color_theme = st.sidebar.selectbox("Select a color theme", color_theme_list)
