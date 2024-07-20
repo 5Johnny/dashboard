@@ -1,0 +1,400 @@
+projname,teamname,environment,region,date_of_build,duration_of_build,status,entitlements_created,user_id,log_on,log_off
+proj0,team13,dev,APAC,Null,Null,Null,Null,a12345,31/03/2024 11:59:05,31/03/2024 12:48:00
+proj0,team12,dev,AMER,Null,Null,Null,Null,a12346,01/04/2024 23:59:23,02/04/2024 00:46:48
+proj0,team13,dev,EMEA,Null,Null,Null,Null,a12347,01/04/2024 23:59:42,02/04/2024 00:13:52
+proj0,team2,dev,AMER,Null,Null,Null,Null,a12348,20/05/2024 23:59:38,21/05/2024 00:07:20
+proj0,team13,dev,EMEA,Null,Null,Null,Null,a12349,07/07/2024 23:59:20,08/07/2024 00:09:45
+proj01,team10,dev,AMER,Null,Null,Null,Null,a12350,05/07/2024 23:59:45,06/07/2024 00:15:57
+proj017,team3,dev,AMER,Null,Null,Null,Null,a12351,12/04/2024 00:00:00,12/04/2024 00:36:09
+proj025,team5,dev,APAC,Null,Null,Null,Null,a12352,20/06/2024 23:59:05,21/06/2024 00:17:39
+proj03,team4,dev,APAC,Null,Null,Null,Null,a12353,17/01/2024 23:59:54,18/01/2024 00:01:52
+proj03,team13,dev,APAC,Null,Null,Null,Null,a12354,30/01/2024 23:59:52,31/01/2024 00:19:46
+proj03,team8,dev,EMEA,Null,Null,Null,Null,a12355,05/04/2024 23:59:47,06/04/2024 00:39:18
+proj03,team11,dev,AMER,Null,Null,Null,Null,a12356,08/05/2024 23:59:54,09/05/2024 00:07:12
+proj037,team15,dev,AMER,Null,Null,Null,Null,a12357,07/04/2024 23:59:53,08/04/2024 00:46:56
+proj04,team13,dev,EMEA,Null,Null,Null,Null,a12358,10/01/2024 23:59:12,11/01/2024 00:40:19
+proj040,team2,dev,AMER,Null,Null,Null,Null,a12359,28/06/2024 23:59:32,29/06/2024 00:07:33
+proj05,team15,dev,APAC,Null,Null,Null,Null,a12360,05/04/2024 23:59:34,06/04/2024 00:56:27
+proj07,team9,dev,AMER,Null,Null,Null,Null,a12361,02/05/2024 23:59:00,03/05/2024 00:43:10
+proj072,team6,dev,APAC,Null,Null,Null,Null,a12362,03/06/2024 23:59:27,04/06/2024 00:52:10
+proj074,team13,dev,AMER,Null,Null,Null,Null,a12363,01/05/2024 23:59:14,02/05/2024 00:18:01
+proj079,team12,dev,APAC,Null,Null,Null,Null,a12364,07/01/2024 23:59:31,08/01/2024 00:24:19
+proj079,team8,dev,AMER,Null,Null,Null,Null,a12365,05/03/2024 23:59:55,06/03/2024 00:37:35
+proj080,team7,dev,APAC,Null,Null,Null,Null,a12366,23/03/2024 23:59:10,24/03/2024 00:40:08
+proj083,team11,dev,APAC,Null,Null,Null,Null,a12367,15/05/2024 23:59:45,16/05/2024 00:33:02
+proj09,team9,dev,AMER,Null,Null,Null,Null,a12368,22/04/2024 23:59:42,23/04/2024 00:01:53
+proj09,team15,dev,APAC,Null,Null,Null,Null,a12369,09/07/2024 23:59:07,10/07/2024 00:43:21
+proj1,team5,dev,EMEA,Null,Null,Null,Null,a12370,03/01/2024 23:59:04,04/01/2024 00:11:31
+proj1,team2,dev,EMEA,Null,Null,Null,Null,a12371,29/01/2024 23:59:55,30/01/2024 00:28:13
+proj1,team15,dev,EMEA,Null,Null,Null,Null,a12372,10/02/2024 23:59:09,11/02/2024 00:31:33
+proj1,team5,dev,AMER,Null,Null,Null,Null,a12373,23/02/2024 23:59:44,24/02/2024 00:36:01
+proj1,team10,dev,APAC,Null,Null,Null,Null,a12374,27/02/2024 23:59:42,28/02/2024 00:15:09
+proj1,team14,dev,AMER,Null,Null,Null,Null,a12375,27/02/2024 23:59:43,28/02/2024 00:11:13
+proj1,team8,dev,AMER,Null,Null,Null,Null,a12376,11/03/2024 23:59:40,12/03/2024 00:16:37
+proj1,team6,dev,AMER,Null,Null,Null,Null,a12377,10/04/2024 23:59:19,11/04/2024 00:20:12
+proj1,team3,dev,APAC,Null,Null,Null,Null,a12378,12/04/2024 23:59:18,13/04/2024 00:24:45
+proj1,team6,dev,APAC,Null,Null,Null,Null,a12379,26/04/2024 23:59:57,27/04/2024 00:38:55
+proj1,team9,dev,EMEA,Null,Null,Null,Null,a12380,29/04/2024 23:59:35,30/04/2024 00:26:00
+proj1,team10,dev,EMEA,Null,Null,Null,Null,a12381,11/05/2024 23:59:53,12/05/2024 00:51:12
+proj1,team13,dev,AMER,Null,Null,Null,Null,a12382,21/06/2024 23:59:35,22/06/2024 00:03:45
+proj1,team3,dev,APAC,Null,Null,Null,Null,a12383,08/07/2024 23:59:59,09/07/2024 00:37:39
+proj10,team14,dev,APAC,Null,Null,Null,Null,a12384,01/03/2024 23:59:29,02/03/2024 00:26:18
+proj10,team9,dev,AMER,Null,Null,Null,Null,a12385,24/03/2024 23:59:10,25/03/2024 01:20:37
+proj103,team9,dev,AMER,Null,Null,Null,Null,a12386,15/03/2024 23:59:02,16/03/2024 00:37:34
+proj104,team8,dev,APAC,Null,Null,Null,Null,a12387,29/06/2024 23:59:05,30/06/2024 00:06:30
+proj111,team10,dev,AMER,Null,Null,Null,Null,a12388,23/02/2024 23:59:53,24/02/2024 00:37:24
+proj114,team9,dev,APAC,Null,Null,Null,Null,a12389,03/07/2024 23:59:46,04/07/2024 00:28:58
+proj116,team8,dev,APAC,Null,Null,Null,Null,a12390,15/04/2024 23:59:17,16/04/2024 00:03:54
+proj117,team8,dev,AMER,Null,Null,Null,Null,a12391,30/01/2024 23:59:33,31/01/2024 00:43:24
+proj118,team3,dev,EMEA,Null,Null,Null,Null,a12392,19/02/2024 23:59:07,20/02/2024 00:14:39
+proj12,team1,dev,AMER,Null,Null,Null,Null,a12393,03/01/2024 23:59:14,04/01/2024 00:11:32
+proj12,team2,dev,AMER,Null,Null,Null,Null,a12394,09/06/2024 23:59:10,10/06/2024 00:17:53
+proj14,team10,dev,APAC,Null,Null,Null,Null,a12395,28/01/2024 23:59:20,29/01/2024 00:40:17
+proj143,team3,dev,AMER,Null,Null,Null,Null,a12396,02/05/2024 23:59:44,03/05/2024 00:04:33
+proj15,team1,dev,EMEA,Null,Null,Null,Null,a12397,10/03/2024 23:59:07,11/03/2024 00:08:35
+proj163,team9,dev,APAC,Null,Null,Null,Null,a12398,04/05/2024 23:59:37,05/05/2024 00:53:35
+proj167,team10,dev,APAC,Null,Null,Null,Null,a12399,22/04/2024 23:59:02,23/04/2024 00:32:11
+proj17,team15,dev,APAC,Null,Null,Null,Null,a12400,24/04/2024 23:59:33,25/04/2024 00:08:56
+proj18,team11,dev,APAC,Null,Null,Null,Null,a12401,07/01/2024 23:59:20,08/01/2024 00:56:18
+proj188,team3,dev,EMEA,Null,Null,Null,Null,a12402,18/02/2024 23:59:50,19/02/2024 00:50:28
+proj19,team15,dev,EMEA,Null,Null,Null,Null,a12403,28/03/2024 23:59:44,29/03/2024 00:18:45
+proj2,team2,dev,APAC,Null,Null,Null,Null,a12404,12/01/2024 23:59:02,13/01/2024 00:13:32
+proj2,team3,dev,AMER,Null,Null,Null,Null,a12405,11/02/2024 23:59:19,12/02/2024 00:27:28
+proj2,team4,dev,AMER,Null,Null,Null,Null,a12406,13/02/2024 23:59:04,14/02/2024 00:08:31
+proj2,team8,dev,APAC,Null,Null,Null,Null,a12407,05/03/2024 23:59:53,06/03/2024 00:47:11
+proj2,team5,dev,EMEA,Null,Null,Null,Null,a12408,26/03/2024 23:59:38,27/03/2024 00:07:56
+proj2,team2,dev,APAC,Null,Null,Null,Null,a12409,29/03/2024 23:59:57,30/03/2024 00:00:15
+proj2,team8,dev,AMER,Null,Null,Null,Null,a12410,30/03/2024 23:59:52,31/03/2024 00:51:36
+proj2,team14,dev,APAC,Null,Null,Null,Null,a12411,05/04/2024 23:59:21,06/04/2024 00:45:55
+proj2,team11,dev,EMEA,Null,Null,Null,Null,a12412,06/04/2024 23:59:43,07/04/2024 00:43:28
+proj2,team12,dev,EMEA,Null,Null,Null,Null,a12413,18/04/2024 23:59:23,19/04/2024 00:53:48
+proj2,team4,dev,EMEA,Null,Null,Null,Null,a12414,31/05/2024 23:59:58,01/06/2024 00:38:20
+proj2,team4,dev,APAC,Null,Null,Null,Null,a12415,05/06/2024 23:59:59,06/06/2024 00:11:48
+proj210,team14,dev,EMEA,Null,Null,Null,Null,a12416,03/02/2024 23:59:50,04/02/2024 00:51:48
+proj216,team2,dev,AMER,Null,Null,Null,Null,a12417,31/03/2024 23:59:34,01/04/2024 00:09:36
+proj218,team8,dev,EMEA,Null,Null,Null,Null,a12418,09/04/2024 23:59:41,10/04/2024 00:28:31
+proj220,team11,dev,AMER,Null,Null,Null,Null,a12419,04/05/2024 23:59:35,05/05/2024 00:54:48
+proj227,team14,dev,APAC,Null,Null,Null,Null,a12420,26/01/2024 23:59:23,27/01/2024 00:27:42
+proj258,team12,dev,APAC,Null,Null,Null,Null,a12421,16/01/2024 23:59:45,17/01/2024 00:09:51
+proj26,team12,dev,APAC,Null,Null,Null,Null,a12422,02/05/2024 23:59:50,03/05/2024 00:10:51
+proj26,team14,dev,EMEA,Null,Null,Null,Null,a12423,15/05/2024 23:59:26,16/05/2024 00:20:46
+proj27,team14,dev,APAC,Null,Null,Null,Null,a12424,10/04/2024 23:59:56,11/04/2024 00:47:59
+proj27,team10,dev,APAC,Null,Null,Null,Null,a12425,23/06/2024 23:59:43,24/06/2024 00:27:39
+proj274,team11,dev,EMEA,Null,Null,Null,Null,a12426,08/07/2024 23:59:43,09/07/2024 00:59:17
+proj276,team3,dev,EMEA,Null,Null,Null,Null,a12427,02/05/2024 23:59:05,03/05/2024 00:48:09
+proj278,team4,dev,APAC,Null,Null,Null,Null,a12428,03/07/2024 23:59:21,04/07/2024 00:12:17
+proj284,team9,dev,AMER,Null,Null,Null,Null,a12429,18/06/2024 23:59:36,19/06/2024 00:33:17
+proj3,team7,dev,APAC,Null,Null,Null,Null,a12430,19/01/2024 23:59:24,20/01/2024 00:16:31
+proj3,team7,dev,AMER,Null,Null,Null,Null,a12431,30/01/2024 23:59:51,31/01/2024 00:50:00
+proj3,team15,dev,AMER,Null,Null,Null,Null,a12432,22/02/2024 23:59:42,23/02/2024 00:49:09
+proj3,team15,dev,AMER,Null,Null,Null,Null,a12433,04/04/2024 23:59:05,05/04/2024 00:47:39
+proj3,team7,dev,AMER,Null,Null,Null,Null,a12434,07/04/2024 23:59:21,08/04/2024 00:00:02
+proj3,team4,dev,AMER,Null,Null,Null,Null,a12435,12/04/2024 23:59:20,13/04/2024 00:46:11
+proj3,team1,dev,APAC,Null,Null,Null,Null,a12436,17/04/2024 23:59:58,18/04/2024 00:03:13
+proj3,team1,dev,EMEA,Null,Null,Null,Null,a12437,19/04/2024 23:59:39,20/04/2024 00:27:19
+proj3,team5,dev,EMEA,Null,Null,Null,Null,a12438,21/04/2024 23:59:02,22/04/2024 00:59:07
+proj3,team1,dev,APAC,Null,Null,Null,Null,a12439,28/05/2024 23:59:28,29/05/2024 00:22:30
+proj3,team4,dev,AMER,Null,Null,Null,Null,a12440,02/06/2024 23:59:14,03/06/2024 00:52:54
+proj3,team1,dev,EMEA,Null,Null,Null,Null,a12441,14/06/2024 23:59:34,15/06/2024 00:42:06
+proj3,team1,dev,EMEA,Null,Null,Null,Null,a12442,02/07/2024 23:59:38,03/07/2024 00:13:29
+proj3,team3,dev,APAC,Null,Null,Null,Null,a12443,07/07/2024 23:59:40,08/07/2024 00:18:41
+proj3,team6,dev,AMER,Null,Null,Null,Null,a12444,09/07/2024 23:59:14,10/07/2024 00:36:55
+proj086,team10,stg,EMEA,Null,Null,Null,Null,a12445,16/01/2024 23:59:04,17/01/2024 00:03:08
+proj09,team2,stg,APAC,Null,Null,Null,Null,a12446,26/01/2024 23:59:46,27/01/2024 00:05:52
+proj097,team14,stg,APAC,Null,Null,Null,Null,a12447,24/04/2024 23:59:58,25/04/2024 00:56:46
+proj1,team2,stg,AMER,Null,Null,Null,Null,a12448,01/01/2024 23:59:29,02/01/2024 00:47:56
+proj1,team9,stg,EMEA,Null,Null,Null,Null,a12449,05/01/2024 23:59:05,06/01/2024 00:26:22
+proj1,team15,stg,APAC,Null,Null,Null,Null,a12450,08/02/2024 23:59:50,09/02/2024 00:19:41
+proj1,team5,stg,APAC,Null,Null,Null,Null,a12451,03/03/2024 23:59:27,04/03/2024 00:35:42
+proj1,team14,stg,APAC,Null,Null,Null,Null,a12452,07/03/2024 23:59:46,08/03/2024 00:43:35
+proj1,team8,stg,APAC,Null,Null,Null,Null,a12453,18/03/2024 23:59:33,19/03/2024 00:59:40
+proj1,team5,stg,EMEA,Null,Null,Null,Null,a12454,30/03/2024 23:59:43,31/03/2024 00:29:37
+proj1,team14,stg,AMER,Null,Null,Null,Null,a12455,31/03/2024 23:59:59,01/04/2024 00:14:12
+proj1,team7,stg,EMEA,Null,Null,Null,Null,a12456,08/05/2024 23:59:51,09/05/2024 00:19:10
+proj10,team2,stg,APAC,Null,Null,Null,Null,a12457,25/04/2024 23:59:21,26/04/2024 00:44:06
+proj102,team8,stg,EMEA,Null,Null,Null,Null,a12458,28/01/2024 23:59:32,29/01/2024 00:01:55
+proj11,team9,stg,APAC,Null,Null,Null,Null,a12459,01/03/2024 23:59:12,02/03/2024 00:41:22
+proj11,team15,stg,APAC,Null,Null,Null,Null,a12460,12/04/2024 23:59:07,13/04/2024 00:55:58
+proj11,team15,stg,APAC,Null,Null,Null,Null,a12461,03/06/2024 23:59:21,04/06/2024 00:22:06
+proj115,team14,stg,EMEA,Null,Null,Null,Null,a12462,08/01/2024 23:59:01,09/01/2024 00:39:14
+proj115,team3,stg,APAC,Null,Null,Null,Null,a12463,11/02/2024 00:00:00,11/02/2024 00:30:37
+proj117,team15,stg,AMER,Null,Null,Null,Null,a12464,05/06/2024 23:59:31,06/06/2024 00:02:31
+proj12,team12,stg,EMEA,Null,Null,Null,Null,a12465,24/03/2024 23:59:16,25/03/2024 00:33:59
+proj12,team4,stg,AMER,Null,Null,Null,Null,a12466,26/04/2024 23:59:54,27/04/2024 00:01:14
+proj137,team9,stg,AMER,Null,Null,Null,Null,a12467,10/05/2024 23:59:29,11/05/2024 00:21:14
+proj14,team6,stg,APAC,Null,Null,Null,Null,a12468,20/05/2024 23:59:54,21/05/2024 00:44:44
+proj149,team15,stg,AMER,Null,Null,Null,Null,a12469,11/05/2024 23:59:37,12/05/2024 00:45:17
+proj15,team5,stg,EMEA,Null,Null,Null,Null,a12470,18/02/2024 23:59:03,19/02/2024 00:09:21
+proj157,team5,stg,EMEA,Null,Null,Null,Null,a12471,17/02/2024 23:59:24,18/02/2024 00:11:19
+proj16,team15,stg,EMEA,Null,Null,Null,Null,a12472,04/01/2024 23:59:03,05/01/2024 00:22:55
+proj161,team12,stg,AMER,Null,Null,Null,Null,a12473,22/04/2024 23:59:24,23/04/2024 00:37:26
+proj161,team8,stg,EMEA,Null,Null,Null,Null,a12474,14/06/2024 23:59:52,15/06/2024 00:23:40
+proj164,team8,stg,AMER,Null,Null,Null,Null,a12475,14/02/2024 23:59:07,15/02/2024 00:55:16
+proj17,team7,stg,EMEA,Null,Null,Null,Null,a12476,23/06/2024 23:59:25,24/06/2024 00:21:15
+proj18,team15,stg,AMER,Null,Null,Null,Null,a12477,06/02/2024 23:59:37,07/02/2024 00:03:06
+proj18,team15,stg,AMER,Null,Null,Null,Null,a12478,06/06/2024 23:59:23,07/06/2024 00:20:24
+proj180,team3,stg,APAC,Null,Null,Null,Null,a12479,21/03/2024 23:59:09,22/03/2024 00:21:10
+proj185,team12,stg,AMER,Null,Null,Null,Null,a12480,20/05/2024 23:59:02,21/05/2024 00:20:29
+proj187,team7,stg,AMER,Null,Null,Null,Null,a12481,04/05/2024 23:59:57,05/05/2024 00:11:22
+proj19,team11,stg,EMEA,Null,Null,Null,Null,a12482,22/03/2024 23:59:17,23/03/2024 00:04:55
+proj19,team8,stg,EMEA,Null,Null,Null,Null,a12483,23/06/2024 23:59:33,24/06/2024 00:13:12
+proj19,team11,stg,AMER,Null,Null,Null,Null,a12484,26/06/2024 23:59:49,27/06/2024 00:19:55
+proj194,team11,stg,APAC,Null,Null,Null,Null,a12485,03/04/2024 23:59:42,04/04/2024 00:56:17
+proj199,team7,stg,EMEA,Null,Null,Null,Null,a12486,02/04/2024 23:59:48,03/04/2024 00:39:14
+proj2,team13,stg,AMER,Null,Null,Null,Null,a12487,20/01/2024 23:59:31,21/01/2024 00:42:05
+proj2,team11,stg,APAC,Null,Null,Null,Null,a12488,05/02/2024 23:59:07,06/02/2024 00:55:26
+proj2,team11,stg,AMER,Null,Null,Null,Null,a12489,18/04/2024 23:59:14,19/04/2024 00:35:30
+proj2,team9,stg,APAC,Null,Null,Null,Null,a12490,21/05/2024 23:59:29,22/05/2024 00:59:50
+proj2,team7,stg,EMEA,Null,Null,Null,Null,a12491,24/05/2024 23:59:52,25/05/2024 00:36:53
+proj2,team12,stg,EMEA,Null,Null,Null,Null,a12492,05/06/2024 23:59:54,06/06/2024 00:53:55
+proj2,team10,stg,APAC,Null,Null,Null,Null,a12493,25/06/2024 23:59:48,26/06/2024 00:37:36
+proj20,team4,stg,EMEA,Null,Null,Null,Null,a12494,05/03/2024 23:59:21,06/03/2024 00:34:41
+proj20,team1,stg,EMEA,Null,Null,Null,Null,a12495,08/03/2024 23:59:40,09/03/2024 00:30:33
+proj20,team2,stg,AMER,Null,Null,Null,Null,a12496,16/05/2024 23:59:05,17/05/2024 00:17:30
+proj21,team10,stg,AMER,Null,Null,Null,Null,a12497,17/01/2024 23:59:06,18/01/2024 00:04:50
+proj21,team12,stg,AMER,Null,Null,Null,Null,a12498,05/02/2024 23:59:17,06/02/2024 00:26:14
+proj21,team3,stg,APAC,Null,Null,Null,Null,a12499,08/05/2024 23:59:25,09/05/2024 00:01:41
+proj22,team3,stg,AMER,Null,Null,Null,Null,a12500,02/07/2024 23:59:44,03/07/2024 00:05:10
+proj225,team5,stg,APAC,Null,Null,Null,Null,a12501,05/01/2024 23:59:54,06/01/2024 00:48:30
+proj227,team3,stg,AMER,Null,Null,Null,Null,a12502,12/04/2024 23:59:08,13/04/2024 00:03:48
+proj229,team3,stg,APAC,Null,Null,Null,Null,a12503,03/07/2024 23:59:41,04/07/2024 00:07:53
+proj24,team12,stg,APAC,Null,Null,Null,Null,a12504,20/04/2024 23:59:24,21/04/2024 00:09:46
+proj244,team11,stg,AMER,Null,Null,Null,Null,a12505,12/04/2024 23:59:17,13/04/2024 00:55:42
+proj25,team15,stg,APAC,Null,Null,Null,Null,a12506,05/03/2024 23:59:12,06/03/2024 00:13:36
+proj26,team10,stg,APAC,Null,Null,Null,Null,a12507,22/04/2024 23:59:11,23/04/2024 00:33:17
+proj262,team2,stg,EMEA,Null,Null,Null,Null,a12508,16/05/2024 23:59:40,17/05/2024 00:20:08
+proj28,team10,stg,EMEA,Null,Null,Null,Null,a12509,27/02/2024 23:59:18,28/02/2024 00:28:06
+proj28,team12,stg,APAC,Null,Null,Null,Null,a12510,02/04/2024 23:59:21,03/04/2024 00:46:52
+proj282,team3,stg,EMEA,Null,Null,Null,Null,a12511,11/01/2024 23:59:37,12/01/2024 00:43:18
+proj285,team6,stg,EMEA,Null,Null,Null,Null,a12512,19/06/2024 23:59:06,20/06/2024 00:42:50
+proj286,team1,stg,APAC,Null,Null,Null,Null,a12513,01/04/2024 23:59:15,02/04/2024 00:46:02
+proj29,team7,stg,EMEA,Null,Null,Null,Null,a12514,06/01/2024 23:59:52,07/01/2024 00:39:51
+proj290,team1,stg,EMEA,Null,Null,Null,Null,a12515,29/04/2024 23:59:42,30/04/2024 00:29:49
+proj299,team8,stg,EMEA,Null,Null,Null,Null,a12516,26/05/2024 23:59:50,27/05/2024 00:29:49
+proj3,team12,stg,AMER,Null,Null,Null,Null,a12517,03/01/2024 23:59:53,04/01/2024 00:39:55
+proj3,team7,stg,AMER,Null,Null,Null,Null,a12518,02/02/2024 23:59:58,03/02/2024 00:45:59
+proj3,team12,stg,EMEA,Null,Null,Null,Null,a12519,17/04/2024 23:59:12,18/04/2024 00:39:40
+proj3,team15,stg,APAC,Null,Null,Null,Null,a12520,18/04/2024 23:59:50,19/04/2024 00:44:22
+proj3,team5,stg,APAC,Null,Null,Null,Null,a12521,30/05/2024 23:59:50,31/05/2024 00:26:52
+proj3,team8,stg,APAC,Null,Null,Null,Null,a12522,01/06/2024 23:59:15,02/06/2024 00:57:50
+proj3,team2,stg,AMER,Null,Null,Null,Null,a12523,21/06/2024 23:59:42,22/06/2024 00:50:15
+proj3,team15,stg,EMEA,Null,Null,Null,Null,a12524,08/07/2024 23:59:32,09/07/2024 00:10:01
+proj30,team10,stg,AMER,Null,Null,Null,Null,a12525,24/01/2024 23:59:40,25/01/2024 00:29:23
+proj306,team7,stg,AMER,Null,Null,Null,Null,a12526,26/04/2024 23:59:39,27/04/2024 00:36:17
+proj308,team7,stg,APAC,Null,Null,Null,Null,a12527,07/04/2024 23:59:30,08/04/2024 00:39:15
+proj31,team5,stg,AMER,Null,Null,Null,Null,a12528,01/03/2024 23:59:13,02/03/2024 00:49:37
+proj32,team6,stg,EMEA,Null,Null,Null,Null,a12529,24/02/2024 23:59:20,25/02/2024 00:31:07
+proj320,team9,stg,AMER,Null,Null,Null,Null,a12530,22/04/2024 23:59:05,23/04/2024 00:22:26
+proj326,team15,stg,EMEA,Null,Null,Null,Null,a12531,15/02/2024 23:59:09,16/02/2024 00:37:30
+proj329,team9,stg,EMEA,Null,Null,Null,Null,a12532,21/04/2024 23:59:55,22/04/2024 00:04:09
+proj329,team1,stg,EMEA,Null,Null,Null,Null,a12533,20/06/2024 23:59:40,21/06/2024 00:37:31
+proj336,team6,stg,AMER,Null,Null,Null,Null,a12534,07/04/2024 23:59:33,08/04/2024 00:42:47
+proj339,team13,stg,AMER,Null,Null,Null,Null,a12535,13/06/2024 23:59:03,14/06/2024 00:28:34
+proj343,team11,stg,APAC,Null,Null,Null,Null,a12536,12/04/2024 23:59:46,13/04/2024 00:31:24
+proj35,team8,stg,AMER,Null,Null,Null,Null,a12537,16/04/2024 23:59:11,17/04/2024 00:34:39
+proj353,team15,stg,EMEA,Null,Null,Null,Null,a12538,20/01/2024 23:59:59,21/01/2024 00:10:32
+proj357,team15,stg,AMER,Null,Null,Null,Null,a12539,03/07/2024 23:59:56,04/07/2024 00:24:43
+proj359,team9,stg,EMEA,Null,Null,Null,Null,a12540,04/05/2024 23:59:14,05/05/2024 00:12:27
+proj359,team12,stg,AMER,Null,Null,Null,Null,a12541,18/06/2024 23:59:16,19/06/2024 00:32:27
+proj36,team15,stg,EMEA,Null,Null,Null,Null,a12542,28/04/2024 23:59:52,29/04/2024 00:21:00
+proj4,team2,dev,EMEA,Null,Null,Null,Null,a12543,19/01/2024 23:59:52,20/01/2024 00:26:19
+proj4,team5,dev,AMER,Null,Null,Null,Null,a12544,21/01/2024 23:59:08,22/01/2024 00:47:41
+proj4,team4,dev,AMER,31/01/2024,3092,Failure,1,a12546,Null,Null
+proj4,team7,dev,AMER,13/02/2024,494,Success,0,a12547,Null,Null
+proj4,team14,dev,APAC,23/02/2024,2846,Success,2,a12548,Null,Null
+proj4,team9,dev,EMEA,27/02/2024,642,Success,3,a12549,Null,Null
+proj4,team3,dev,AMER,04/03/2024,1502,Success,0,a12550,Null,Null
+proj4,team6,dev,EMEA,09/03/2024,2607,Failure,3,a12551,Null,Null
+proj4,team2,dev,APAC,27/03/2024,606,Failure,1,a12552,Null,Null
+proj4,team6,dev,AMER,25/04/2024,971,Success,3,a12553,Null,Null
+proj4,team5,dev,EMEA,01/06/2024,3408,Failure,0,a12554,Null,Null
+proj4,team13,dev,APAC,04/06/2024,3460,Failure,0,a12555,Null,Null
+proj4,team13,dev,EMEA,05/06/2024,300,Failure,0,a12556,Null,Null
+proj4,team14,dev,EMEA,19/06/2024,256,Failure,1,a12557,Null,Null
+proj4,team5,dev,APAC,24/06/2024,2572,Success,1,a12558,Null,Null
+proj4,team14,dev,APAC,06/07/2024,678,Success,2,a12559,Null,Null
+proj40,team15,dev,AMER,26/03/2024,284,Success,1,a12560,Null,Null
+proj412,team14,dev,AMER,03/04/2024,3597,Failure,2,a12561,Null,Null
+proj42,team7,dev,APAC,29/04/2024,30,Failure,2,a12562,Null,Null
+proj423,team8,dev,EMEA,14/01/2024,1930,Failure,1,a12563,Null,Null
+proj428,team10,dev,APAC,16/04/2024,2306,Failure,3,a12564,Null,Null
+proj43,team9,dev,AMER,29/02/2024,1607,Failure,3,a12565,Null,Null
+proj44,team12,dev,AMER,08/01/2024,1006,Success,1,a12566,Null,Null
+proj44,team4,dev,EMEA,01/03/2024,1945,Failure,3,a12567,Null,Null
+proj454,team7,dev,EMEA,31/01/2024,1810,Success,3,a12568,Null,Null
+proj457,team1,dev,AMER,05/01/2024,1416,Success,2,a12569,Null,Null
+proj47,team13,dev,APAC,06/01/2024,1072,Failure,1,a12570,Null,Null
+proj475,team3,dev,EMEA,06/05/2024,3531,Failure,1,a12571,Null,Null
+proj483,team11,dev,AMER,03/04/2024,1204,Success,3,a12572,Null,Null
+proj487,team12,dev,EMEA,29/06/2024,1519,Failure,0,a12573,Null,Null
+proj489,team1,dev,AMER,22/05/2024,393,Success,2,a12574,Null,Null
+proj492,team9,dev,AMER,22/01/2024,3351,Failure,1,a12575,Null,Null
+proj492,team9,dev,EMEA,04/03/2024,3214,Failure,3,a12576,Null,Null
+proj5,team4,dev,APAC,23/01/2024,591,Failure,3,a12577,Null,Null
+proj5,team11,dev,EMEA,07/02/2024,2571,Success,2,a12578,Null,Null
+proj5,team4,dev,APAC,17/02/2024,223,Failure,3,a12579,Null,Null
+proj5,team6,dev,APAC,08/05/2024,420,Failure,0,a12580,Null,Null
+proj5,team8,dev,APAC,17/05/2024,3017,Success,0,a12581,Null,Null
+proj5,team10,dev,EMEA,28/05/2024,668,Success,0,a12582,Null,Null
+proj5,team2,dev,AMER,01/07/2024,40,Failure,3,a12583,Null,Null
+proj500,team2,dev,EMEA,20/04/2024,1797,Failure,0,a12584,Null,Null
+proj51,team4,dev,APAC,02/07/2024,1762,Failure,2,a12585,Null,Null
+proj517,team1,dev,APAC,06/02/2024,2264,Failure,0,a12586,Null,Null
+proj528,team9,dev,AMER,24/06/2024,2006,Failure,3,a12587,Null,Null
+proj53,team11,dev,APAC,05/01/2024,436,Success,2,a12588,Null,Null
+proj54,team13,dev,AMER,05/03/2024,277,Failure,1,a12589,Null,Null
+proj540,team9,dev,EMEA,05/05/2024,3124,Success,2,a12590,Null,Null
+proj541,team9,dev,AMER,24/03/2024,2058,Failure,1,a12591,Null,Null
+proj549,team15,dev,APAC,01/02/2024,472,Success,1,a12592,Null,Null
+proj55,team11,dev,AMER,18/01/2024,2303,Success,3,a12593,Null,Null
+proj559,team14,dev,EMEA,14/06/2024,827,Failure,3,a12594,Null,Null
+proj56,team4,dev,EMEA,14/02/2024,376,Failure,3,a12595,Null,Null
+proj56,team7,dev,AMER,07/07/2024,1522,Success,2,a12596,Null,Null
+proj562,team11,dev,AMER,12/06/2024,495,Failure,1,a12597,Null,Null
+proj568,team8,dev,EMEA,16/01/2024,2323,Success,0,a12598,Null,Null
+proj576,team14,dev,EMEA,04/07/2024,438,Failure,2,a12599,Null,Null
+proj58,team14,dev,AMER,03/03/2024,1280,Failure,3,a12600,Null,Null
+proj6,team3,dev,AMER,24/01/2024,2724,Failure,2,a12601,Null,Null
+proj6,team15,dev,AMER,03/02/2024,998,Failure,0,a12602,Null,Null
+proj6,team8,dev,APAC,12/03/2024,3536,Success,3,a12603,Null,Null
+proj6,team12,dev,AMER,10/04/2024,869,Success,3,a12604,Null,Null
+proj6,team15,dev,EMEA,16/04/2024,1970,Success,2,a12605,Null,Null
+proj6,team14,dev,AMER,30/04/2024,1871,Failure,3,a12606,Null,Null
+proj6,team10,dev,AMER,15/05/2024,1245,Failure,1,a12607,Null,Null
+proj6,team4,dev,APAC,10/06/2024,1963,Success,1,a12608,Null,Null
+proj607,team1,dev,EMEA,08/02/2024,3445,Success,2,a12609,Null,Null
+proj613,team5,dev,AMER,18/03/2024,409,Success,1,a12610,Null,Null
+proj615,team4,dev,EMEA,09/01/2024,438,Failure,0,a12611,Null,Null
+proj62,team6,dev,AMER,12/01/2024,131,Failure,2,a12612,Null,Null
+proj62,team14,dev,EMEA,12/06/2024,1477,Failure,0,a12613,Null,Null
+proj620,team9,dev,APAC,07/01/2024,495,Failure,1,a12614,Null,Null
+proj626,team6,dev,EMEA,24/01/2024,1624,Failure,1,a12615,Null,Null
+proj65,team12,dev,AMER,01/07/2024,1323,Success,3,a12616,Null,Null
+proj663,team15,dev,EMEA,22/04/2024,2599,Success,2,a12617,Null,Null
+proj67,team1,dev,APAC,26/02/2024,3134,Success,0,a12618,Null,Null
+proj67,team5,dev,APAC,08/04/2024,2901,Failure,0,a12619,Null,Null
+proj67,team15,dev,APAC,18/06/2024,1606,Success,0,a12620,Null,Null
+proj693,team7,dev,EMEA,05/06/2024,1565,Failure,2,a12621,Null,Null
+proj7,team7,dev,AMER,13/02/2024,2070,Success,2,a12622,Null,Null
+proj7,team8,dev,EMEA,03/03/2024,3341,Failure,2,a12623,Null,Null
+proj7,team2,dev,EMEA,04/03/2024,1942,Failure,3,a12624,Null,Null
+proj7,team14,dev,AMER,09/03/2024,693,Success,1,a12625,Null,Null
+proj7,team12,dev,EMEA,12/03/2024,1913,Success,3,a12626,Null,Null
+proj7,team4,dev,EMEA,15/03/2024,3444,Success,0,a12627,Null,Null
+proj7,team9,dev,AMER,05/04/2024,527,Success,0,a12628,Null,Null
+proj7,team3,dev,AMER,12/04/2024,3596,Failure,0,a12629,Null,Null
+proj7,team7,dev,EMEA,20/04/2024,3477,Success,0,a12630,Null,Null
+proj7,team7,dev,APAC,24/04/2024,2592,Success,1,a12631,Null,Null
+proj7,team2,dev,APAC,10/05/2024,2466,Success,1,a12632,Null,Null
+proj7,team2,dev,AMER,11/05/2024,1786,Failure,3,a12633,Null,Null
+proj7,team3,dev,AMER,13/05/2024,1568,Failure,1,a12634,Null,Null
+proj70,team15,dev,AMER,07/02/2024,867,Success,1,a12635,Null,Null
+proj706,team13,dev,AMER,12/02/2024,1727,Success,1,a12636,Null,Null
+proj714,team12,dev,APAC,25/02/2024,1582,Failure,0,a12637,Null,Null
+proj714,team7,dev,APAC,08/05/2024,1999,Failure,2,a12638,Null,Null
+proj72,team10,dev,EMEA,15/04/2024,202,Failure,1,a12639,Null,Null
+proj72,team15,dev,EMEA,23/05/2024,3274,Success,3,a12640,Null,Null
+proj723,team3,dev,APAC,11/03/2024,1766,Failure,2,a12641,Null,Null
+proj726,team5,dev,APAC,13/04/2024,821,Failure,0,a12642,Null,Null
+proj737,team8,dev,EMEA,17/02/2024,1922,Success,1,a12644,Null,Null
+proj747,team10,dev,AMER,02/07/2024,1957,Success,3,a12645,Null,Null
+proj750,team6,dev,APAC,16/05/2024,72,Success,2,a12646,Null,Null
+proj76,team9,dev,AMER,13/01/2024,1707,Failure,3,a12647,Null,Null
+proj76,team10,dev,EMEA,22/02/2024,874,Failure,3,a12648,Null,Null
+proj762,team4,dev,AMER,12/06/2024,444,Failure,3,a12649,Null,Null
+proj766,team12,dev,APAC,18/02/2024,1324,Success,0,a12650,Null,Null
+proj77,team2,dev,EMEA,04/01/2024,2990,Success,2,a12651,Null,Null
+proj77,team8,dev,EMEA,05/07/2024,683,Failure,0,a12652,Null,Null
+proj787,team6,dev,EMEA,16/01/2024,3540,Failure,1,a12653,Null,Null
+proj799,team15,dev,APAC,03/04/2024,1122,Success,3,a12654,Null,Null
+proj799,team11,dev,EMEA,04/07/2024,1289,Success,3,a12655,Null,Null
+proj8,team4,dev,AMER,23/01/2024,3200,Success,3,a12656,Null,Null
+proj8,team6,dev,APAC,24/01/2024,3395,Failure,1,a12657,Null,Null
+proj8,team11,dev,APAC,30/01/2024,74,Success,3,a12658,Null,Null
+proj8,team9,dev,AMER,27/03/2024,1502,Failure,3,a12659,Null,Null
+proj8,team9,dev,EMEA,31/03/2024,1358,Failure,0,a12660,Null,Null
+proj8,team12,dev,EMEA,25/04/2024,1517,Failure,0,a12661,Null,Null
+proj8,team2,dev,EMEA,01/05/2024,2154,Success,1,a12662,Null,Null
+proj8,team15,dev,AMER,25/05/2024,629,Success,3,a12663,Null,Null
+proj8,team1,dev,AMER,28/05/2024,1095,Failure,3,a12664,Null,Null
+proj8,team11,dev,AMER,06/06/2024,2617,Failure,0,a12665,Null,Null
+proj8,team4,dev,APAC,11/06/2024,1985,Failure,3,a12666,Null,Null
+proj8,team2,dev,EMEA,20/06/2024,790,Failure,0,a12667,Null,Null
+proj800,team5,dev,EMEA,15/03/2024,225,Success,1,a12668,Null,Null
+proj803,team3,dev,EMEA,01/06/2024,1794,Success,3,a12669,Null,Null
+proj81,team2,dev,APAC,27/06/2024,1769,Success,2,a12670,Null,Null
+proj810,team5,dev,APAC,13/01/2024,2367,Success,0,a12671,Null,Null
+proj812,team2,dev,EMEA,11/01/2024,1803,Failure,1,a12672,Null,Null
+proj814,team2,dev,AMER,21/02/2024,819,Success,2,a12673,Null,Null
+proj817,team9,dev,EMEA,25/04/2024,2815,Failure,0,a12674,Null,Null
+proj817,team7,dev,EMEA,14/05/2024,1090,Failure,1,a12675,Null,Null
+proj82,team8,dev,AMER,13/01/2024,1969,Success,1,a12676,Null,Null
+proj83,team3,dev,AMER,06/02/2024,3543,Success,0,a12677,Null,Null
+proj836,team5,dev,EMEA,22/06/2024,940,Failure,1,a12678,Null,Null
+proj84,team8,dev,EMEA,31/03/2024,2415,Success,1,a12679,Null,Null
+proj84,team9,dev,AMER,19/05/2024,2303,Failure,0,a12680,Null,Null
+proj840,team9,dev,AMER,01/03/2024,1707,Success,3,a12681,Null,Null
+proj85,team1,dev,EMEA,14/06/2024,2547,Success,2,a12682,Null,Null
+proj850,team15,dev,AMER,05/03/2024,2821,Failure,3,a12683,Null,Null
+proj853,team7,dev,EMEA,15/05/2024,2506,Failure,0,a12684,Null,Null
+proj862,team13,dev,EMEA,13/06/2024,550,Success,0,a12685,Null,Null
+proj863,team2,dev,AMER,07/07/2024,561,Failure,1,a12686,Null,Null
+proj864,team5,dev,APAC,19/02/2024,785,Failure,1,a12687,Null,Null
+proj865,team4,dev,APAC,06/03/2024,1634,Success,0,a12688,Null,Null
+proj87,team15,dev,APAC,22/01/2024,1349,Success,3,a12689,Null,Null
+proj87,team9,dev,APAC,04/05/2024,2415,Success,2,a12690,Null,Null
+proj873,team6,dev,EMEA,27/06/2024,1034,Failure,2,a12691,Null,Null
+proj879,team9,dev,EMEA,30/03/2024,2751,Failure,2,a12692,Null,Null
+proj88,team9,dev,APAC,23/04/2024,72,Success,0,a12693,Null,Null
+proj881,team12,dev,AMER,23/02/2024,1545,Failure,1,a12694,Null,Null
+proj89,team10,dev,EMEA,13/06/2024,980,Success,1,a12695,Null,Null
+proj891,team10,dev,EMEA,05/04/2024,2458,Success,3,a12696,Null,Null
+proj892,team8,dev,EMEA,03/05/2024,1449,Failure,0,a12697,Null,Null
+proj896,team9,dev,AMER,11/05/2024,1127,Failure,0,a12698,Null,Null
+proj897,team3,dev,AMER,27/05/2024,489,Success,2,a12699,Null,Null
+proj9,team3,dev,APAC,14/01/2024,843,Success,1,a12700,Null,Null
+proj9,team14,dev,AMER,23/01/2024,2098,Failure,1,a12701,Null,Null
+proj9,team1,dev,AMER,25/02/2024,2264,Failure,0,a12702,Null,Null
+proj9,team6,dev,EMEA,04/03/2024,3176,Failure,2,a12703,Null,Null
+proj9,team2,dev,AMER,13/03/2024,99,Success,1,a12704,Null,Null
+proj9,team11,dev,EMEA,15/03/2024,2834,Success,3,a12705,Null,Null
+proj9,team4,dev,APAC,24/04/2024,513,Success,1,a12706,Null,Null
+proj9,team12,dev,APAC,25/04/2024,2547,Failure,1,a12707,Null,Null
+proj9,team8,dev,AMER,29/04/2024,1685,Success,1,a12708,Null,Null
+proj9,team2,dev,EMEA,04/05/2024,1887,Success,2,a12709,Null,Null
+proj9,team3,dev,AMER,14/05/2024,1392,Success,2,a12710,Null,Null
+proj9,team7,dev,APAC,08/07/2024,3312,Failure,1,a12711,Null,Null
+proj900,team13,dev,AMER,18/02/2024,1427,Success,3,a12712,Null,Null
+proj901,team13,dev,APAC,15/03/2024,960,Success,1,a12713,Null,Null
+proj901,team7,dev,AMER,05/06/2024,37,Success,3,a12714,Null,Null
+proj906,team6,dev,AMER,08/03/2024,2743,Failure,2,a12715,Null,Null
+proj91,team11,dev,AMER,19/01/2024,1350,Failure,3,a12716,Null,Null
+proj91,team7,dev,EMEA,03/05/2024,3174,Failure,1,a12717,Null,Null
+proj91,team13,dev,AMER,08/07/2024,1397,Failure,0,a12718,Null,Null
+proj910,team9,dev,AMER,19/06/2024,447,Success,0,a12719,Null,Null
+proj92,team10,dev,EMEA,15/02/2024,1914,Success,1,a12720,Null,Null
+proj92,team8,dev,EMEA,29/04/2024,125,Failure,3,a12721,Null,Null
+proj923,team11,dev,APAC,15/05/2024,2957,Failure,0,a12722,Null,Null
+proj93,team14,dev,AMER,07/02/2024,743,Success,2,a12723,Null,Null
+proj93,team3,dev,APAC,25/04/2024,3392,Success,3,a12724,Null,Null
+proj93,team11,dev,AMER,19/05/2024,848,Failure,0,a12725,Null,Null
+proj93,team5,dev,EMEA,29/05/2024,500,Failure,2,a12726,Null,Null
+proj93,team3,dev,APAC,04/06/2024,1324,Success,1,a12727,Null,Null
+proj931,team12,dev,EMEA,28/04/2024,781,Success,3,a12728,Null,Null
+proj933,team11,dev,APAC,28/05/2024,1881,Failure,3,a12729,Null,Null
+proj94,team11,dev,AMER,27/03/2024,2577,Failure,1,a12730,Null,Null
+proj94,team3,dev,APAC,29/03/2024,1822,Failure,2,a12731,Null,Null
+proj94,team12,dev,AMER,23/06/2024,745,Success,2,a12732,Null,Null
+proj95,team15,dev,EMEA,12/03/2024,2466,Success,2,a12733,Null,Null
+proj964,team12,dev,AMER,26/02/2024,3114,Failure,3,a12734,Null,Null
+proj965,team10,dev,APAC,30/05/2024,2852,Failure,1,a12735,Null,Null
+proj97,team15,dev,AMER,21/02/2024,237,Failure,2,a12736,Null,Null
+proj97,team2,dev,AMER,01/04/2024,1691,Failure,1,a12737,Null,Null
+proj97,team5,dev,EMEA,30/05/2024,1352,Success,0,a12738,Null,Null
+proj972,team7,dev,EMEA,06/03/2024,1585,Success,3,a12739,Null,Null
+proj974,team7,dev,APAC,04/06/2024,807,Failure,1,a12740,Null,Null
+proj98,team9,dev,APAC,01/06/2024,3422,Success,1,a12741,Null,Null
+proj99,team8,dev,EMEA,02/02/2024,2174,Failure,1,a12742,Null,Null
+proj99,team11,dev,APAC,23/04/2024,1528,Failure,2,a12743,Null,Null
+proj99,team5,dev,AMER,01/06/2024,1455,Success,0,a12744,Null,Null
+proj99,team5,dev,AMER,01/06/2024,1455,Success,0,a12744,Null,Null
