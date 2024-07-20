@@ -6,10 +6,10 @@ import plotly.express as px
 
 st.set_page_config(layout='wide')
 def load_data(file_path):
-    return pd.read_csv(file_path, parse_dates=['time_of_build'])
+    return pd.read_csv(file_path, parse_dates=['date_of_build'])
 
 # Load data
-df = load_data('data.csv')
+df = load_data('data/new_mock_data.csv')
 
 # Load custom CSS
 with open('style.css') as f:
@@ -20,19 +20,19 @@ st.title("Jenkins Build Dashboard")
 
 # Filters
 st.sidebar.header("Filters")
-date_range = st.sidebar.date_input("Date Range", [])
+date_range = st.sidebar.date_input("Date Range", [], format="DD/MM/YYYY")
 env_filter = st.sidebar.multiselect("Environment", options=df['environment'].unique())
 status_filter = st.sidebar.multiselect("Status", options=df['status'].unique())
 
 # Apply filters to data
 filtered_df = df.copy()
-if date_range:
+if len(date_range) == 2:
     start_date, end_date = date_range
-    filtered_df = filtered_df[(filtered_df['time_of_build'] >= start_date) & (filtered_df['time_of_build'] <= end_date)]
+    df = df[(df['date_of_build'] >= start_date) & (df['date_of_build'] <= end_date)]
 if env_filter:
-    filtered_df = filtered_df[filtered_df['environment'].isin(env_filter)]
+    df = df[df['environment'].isin(env_filter)]
 if status_filter:
-    filtered_df = filtered_df[filtered_df['status'].isin(status_filter)]
+    df = df[df['status'].isin(status_filter)]
 
 # Summary metrics
 st.header("Summary Metrics")
@@ -40,7 +40,7 @@ st.header("Summary Metrics")
 total_builds = len(filtered_df)
 successful_builds = filtered_df['status'].value_counts().get('Success', 0)
 failed_builds = filtered_df['status'].value_counts().get('Failed', 0)
-new_projects = filtered_df['project'].nunique()
+new_projects = filtered_df['projname'].nunique()
 
 col1, col2, col3, col4 = st.columns(4)
 
@@ -61,8 +61,8 @@ def show_detailed_view(metric, filtered_df):
     if metric == "Total Builds":
         with bottom1:
             st.subheader("Total Builds Over Time")
-            builds_over_time = filtered_df.groupby(filtered_df['time_of_build'].dt.date).size().reset_index(name='counts')
-            fig = px.line(builds_over_time, x='time_of_build', y='counts', title="Total Builds Over Time")
+            builds_over_time = filtered_df.groupby(filtered_df['date_of_build'].dt.date).size().reset_index(name='counts')
+            fig = px.line(builds_over_time, x='date_of_build', y='counts', title="Total Builds Over Time")
             st.plotly_chart(fig)
         with bottom2:
             st.subheader("Detailed Data")
@@ -73,8 +73,8 @@ def show_detailed_view(metric, filtered_df):
         with bottom1:
             st.subheader("Successful Builds Over Time")
             success_df = filtered_df[filtered_df['status'] == 'Success']
-            success_over_time = success_df.groupby(success_df['time_of_build'].dt.date).size().reset_index(name='counts')
-            fig = px.line(success_over_time, x='time_of_build', y='counts', title="Successful Builds Over Time")
+            success_over_time = success_df.groupby(success_df['date_of_build'].dt.date).size().reset_index(name='counts')
+            fig = px.line(success_over_time, x='date_of_build', y='counts', title="Successful Builds Over Time")
             st.plotly_chart(fig)
         with bottom2:
             st.subheader("Detailed Data")
@@ -83,8 +83,8 @@ def show_detailed_view(metric, filtered_df):
         with bottom1:
             st.subheader("Failed Builds Over Time")
             failed_df = filtered_df[filtered_df['status'] == 'Failed']
-            failed_over_time = failed_df.groupby(failed_df['time_of_build'].dt.date).size().reset_index(name='counts')
-            fig = px.line(failed_over_time, x='time_of_build', y='counts', title="Failed Builds Over Time")
+            failed_over_time = failed_df.groupby(failed_df['date_of_build'].dt.date).size().reset_index(name='counts')
+            fig = px.line(failed_over_time, x='date_of_build', y='counts', title="Failed Builds Over Time")
             st.plotly_chart(fig)
         with bottom2:
             st.subheader("Detailed Data")
@@ -98,7 +98,7 @@ def show_detailed_view(metric, filtered_df):
             st.plotly_chart(fig)
         with bottom2:
             st.subheader("Detailed Data")
-            st.dataframe(filtered_df[['project', 'time_of_build']].drop_duplicates())
+            st.dataframe(filtered_df[['projname', 'date_of_build']].drop_duplicates())
 
 # Flag to check if detailed view is shown
 show_details = False
