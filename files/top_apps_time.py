@@ -94,19 +94,23 @@ def display_project_time_chart(df, selected_project):
     project_time_chart = project_time_chart.configure_title(fontSize=20, orient='top', anchor='middle')
     st.altair_chart(project_time_chart, use_container_width=True)
 
+def display_env_progression_chart(env_durations_pivot, selected_project):
+    project_data = env_durations_pivot[env_durations_pivot['projname'] == selected_project]
 
-def display_env_barchart(project_data, selected_project):
-    env_data = project_data.groupby('environment').agg(
-        total_time_spent=('total_time_spent', 'sum'),
-        logins_count=('logins_count', 'sum')
-    ).reset_index()
+    project_data_long = project_data.melt(id_vars=['projname'], value_vars=['dev', 'stg', 'prd'],
+                                          var_name='environment', value_name='days_in_env')
 
-    fig = px.bar(env_data, x='environment', y=['total_time_spent', 'logins_count'],
-                 title=f'Time Spent and Logins Count per Environment for {selected_project}',
-                 labels={'environment': 'Environment'},
-                 barmode='group')
-    st.plotly_chart(fig, use_container_width=True)
+    progression_chart = alt.Chart(project_data_long).mark_line(point=True).encode(
+        x='environment:N',
+        y='days_in_env:Q',
+        tooltip=['environment:N', 'days_in_env:Q']
+    ).properties(
+        title=f'Project Progression - {selected_project.capitalize()}',
+        width=700,
+        height=400
+    )
 
+    st.altair_chart(progression_chart, use_container_width=True)
 
 def main(df, build_df):
     if not df.empty:
@@ -126,7 +130,7 @@ def main(df, build_df):
         if selected_project:
             project_data = df[df['projname'] == selected_project]
             display_project_time_chart(df, selected_project)
-            display_env_barchart(project_data, selected_project)
+            display_env_progression_chart(env_durations_pivot, selected_project)
         else:
             st.write("No project selected")
     else:
