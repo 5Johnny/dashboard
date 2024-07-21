@@ -134,7 +134,7 @@ with col[2]:
     st.markdown('#### Top Apps: Time Spent')
     top_apps_time.main(filtered_logins_df, filtered_builds_df)
 
-    with st.expander('##### :orange[**Latest News:**]', expanded=True): #lol
+    with st.expander('##### :orange[**Latest News:**]', expanded=True): #loll
         st.write('''
             - :orange[**Headline 1**]: 11 Apps on the AppsStore
             - :orange[**Headline 2**]: Some really really cool info about finstrat here
