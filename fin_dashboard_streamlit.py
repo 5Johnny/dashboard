@@ -50,7 +50,7 @@ max_date_of_build = builds_df['date_of_build'].max()
 
 # Default min and max dates if they are NaT
 if pd.isnull(min_date_of_build):
-    min_date_of_build = pd.Timestamp('2000-01-01')
+    min_date_of_build = pd.Timestamp('2000-01-01') #
 if pd.isnull(max_date_of_build):
     max_date_of_build = pd.Timestamp('2100-01-01')
 
