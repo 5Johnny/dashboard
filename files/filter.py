@@ -26,22 +26,24 @@ def filter_df(df, date_range, status_filter, region_filter, env_filter):
 
 
 def login_filter(df, region_filter, env_filter):
-    # Group by project and date to get the total time spent and number of logins for each project
-
+    # Filter by region and environment
     if region_filter:
         df = df[df['region'].isin(region_filter)]
     if env_filter:
         df = df[df['environment'].isin(env_filter)]
 
-    df = df.groupby(['projname', df['log_on'].dt.date]).agg(
+    # Group by project, environment, and date to get the total time spent and number of logins for each project
+    df = df.groupby(['projname', 'environment', df['log_on'].dt.date]).agg(
         total_time_spent=('time_spent', 'sum'),
         logins_count=('log_on', 'count')
     ).reset_index()
-    df.columns = ['projname', 'log_on_date', 'total_time_spent', 'logins_count']
+
+    df.columns = ['projname', 'environment', 'log_on_date', 'total_time_spent', 'logins_count']
     df['log_on_date'] = pd.to_datetime(df['log_on_date'])
 
     min_date = df['log_on_date'].min()
     max_date = df['log_on_date'].max()
+
     return df, min_date, max_date
 
 

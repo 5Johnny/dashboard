@@ -10,13 +10,7 @@ from files import monthly_metrics
 
 import streamlit as st
 import pandas as pd
-import plotly.express as px
-import datetime
-from datetime import timezone
-from datetime import date
-import streamviz
 import altair as alt
-import numpy as np
 
 st.set_page_config(
     page_icon="🏂",
@@ -34,9 +28,9 @@ st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 #######################
 # Load data
 
-df = pd.read_csv('data/log_on_data.csv')
+df = pd.read_csv('data/data.csv')
 
-df['date_of_build'] = pd.to_datetime(df['date_of_build'], errors='coerce', dayfirst=True, format='%d/%m/%Y').dt.date
+df['date_of_build'] = pd.to_datetime(df['date_of_build'], errors='coerce', dayfirst=True, format='%d/%m/%Y')
 df['log_on'] = pd.to_datetime(df['log_on'], errors='coerce', dayfirst=True, format='%d/%m/%Y %H:%M:%S')
 df['log_off'] = pd.to_datetime(df['log_off'], errors='coerce', dayfirst=True, format='%d/%m/%Y %H:%M:%S')
 
@@ -45,6 +39,20 @@ df['time_spent'] = df['time_spent'].fillna(0)
 
 builds_df = df[df['log_on'].isna() & df['log_off'].isna()]
 logins_df = df[df['log_on'].notna() & df['log_off'].notna()]
+print(builds_df, "BUILDS")
+print(logins_df, "LOGINS")
+
+# Handle NaN values in date_of_build
+builds_df['date_of_build'] = pd.to_datetime(builds_df['date_of_build'], errors='coerce')
+
+min_date_of_build = builds_df['date_of_build'].min()
+max_date_of_build = builds_df['date_of_build'].max()
+
+# Default min and max dates if they are NaT
+if pd.isnull(min_date_of_build):
+    min_date_of_build = pd.Timestamp('2000-01-01')
+if pd.isnull(max_date_of_build):
+    max_date_of_build = pd.Timestamp('2100-01-01')
 
 #######################
 # Sidebar
@@ -59,12 +67,12 @@ with st.sidebar:
 
     st.sidebar.header("Filters")
     date_range = st.sidebar.date_input("#### Date Range", [], format="DD/MM/YYYY",
-                                       min_value=builds_df['date_of_build'].min(),
-                                       max_value=builds_df['date_of_build'].max())
+                                       min_value=min_date_of_build,
+                                       max_value=max_date_of_build)
     periodic_filter = st.selectbox("#### Periodic Filter", ["Daily", "Weekly", "Monthly"])
     region_filter = st.sidebar.multiselect("#### Region", options=["EMEA", "APAC", "AMER"])
     env_filter = st.sidebar.multiselect("#### Environment", options=df['environment'].unique())
-    status_filter = st.sidebar.multiselect("#### Status", options=["Success", "Faliure"])
+    status_filter = st.sidebar.multiselect("#### Status", options=["Success", "Failure"])
     builds_per_team_filter = st.sidebar.slider("#### Builds per Team view", 0, len(df['teamname'].unique()), 10)
     time_count_filter = st.selectbox("#### Time Count", ["total_time_spent", "logins_count"])
 
@@ -95,13 +103,14 @@ with st.sidebar:
         time_count_filter = 'total_time_spent'
 
 ######################
-# Dashboard Main Panel
-
+# Filter Data
 filtered_builds_df = filter.filter_df(builds_df, date_range, status_filter, region_filter, env_filter)
 logins_df, min_date, max_date = filter.login_filter(logins_df, region_filter, env_filter)
 filtered_logins_df = filter.login_filter_date(logins_df, date_range)
+
+######################
+# Dashboard Main Panel
 col = st.columns((1.5, 4.5, 2), gap='medium')
-print("hi")
 
 with col[0]:
     st.title("Current")
@@ -123,11 +132,11 @@ with col[1]:
 
 with col[2]:
     st.markdown('#### Top Apps: Time Spent')
-    top_apps_time.main(filtered_logins_df)
+    top_apps_time.main(filtered_logins_df, filtered_builds_df)
 
     with st.expander('##### :orange[**Latest News:**]', expanded=True):
         st.write('''
             - :orange[**Headline 1**]: 11 Apps on the AppsStore
             - :orange[**Headline 2**]: Some really really cool info about finstrat here
             - :orange[**Headline 3**]: Finstrat is growing.
-            ''')     
+            ''')

@@ -3,7 +3,7 @@ import streamlit as st
 import altair as alt
 
 # Load data
-df = pd.read_csv('data/new_mock_data.csv', parse_dates=["date_of_build", "log_on", "log_off"], dayfirst=True)
+df = pd.read_csv('data/data.csv', parse_dates=["date_of_build", "log_on", "log_off"], dayfirst=True)
 
 # Ensure date columns are correctly parsed
 df['date_of_build'] = pd.to_datetime(df['date_of_build'], errors='coerce')
