@@ -4,21 +4,13 @@ import altair as alt
 import streamlit as st
 
 
-def convert_duration(duration):
-    try:
-        h, m, s = map(int, duration.split(':'))
-        return h + m / 60 + s / 3600
-    except:
-        return 0
-
-
-def show(df):
-    # Convert duration from hh:mm:ss to total hours
-    df['duration_of_build'] = df['duration_of_build'].apply(convert_duration)
-
+def show(df, selected_colors):
     # Calculate regional exposure metrics
+    colour1 = [selected_colors[3], selected_colors[5]]
+    colour2 = [selected_colors[2], selected_colors[4]]
+
     total_builds = df.shape[0]
-    regions = ['AMER', 'EMEA', 'APAC']
+    regions = df['region'].unique()
     region_data = {region: df[df['region'] == region] for region in regions}
     region_metrics = {}
 
@@ -26,21 +18,21 @@ def show(df):
         if data.shape[0]:
             region_metrics[region] = {
                 'exposure': (data.shape[0] / total_builds) * 100,
-                'success_rate': (data[data['status'] == 'Success'].shape[0] / data.shape[0]) * 100,
+                #'success_rate': (data[data['status'] == 'Success'].shape[0] / data.shape[0]) * 100,
                 'unique_projects': data['projname'].nunique()
             }
 
     # Setting up Streamlit columns for visualization
-    inners = st.columns(3)
+    inners = st.columns(2)
 
     # Loop through each region and display metrics
-    for i, (region, metrics) in enumerate(region_metrics.items()):
-        with inners[i]:
-            st.markdown(f'##### {region} Metrics')
-            st.altair_chart(donut.make_donut(round(metrics['exposure']), 'Build Exposure', 'blue'))
-            st.markdown(f'##### {region} Number of Builds')
-            st.altair_chart(donut.make_donut(round(metrics['success_rate']), 'Success Rate', 'orange'))
-            st.metric("Unique Projects", metrics['unique_projects'])
+    for region in (df['region'].unique()):
+        with inners[0]:
+            st.markdown(f'##### {region} Exposure')
+            st.altair_chart(donut.make_donut(round(region_metrics[region]['exposure']), 'Build Exposure', colour1))
+        with inners[1]:
+            st.markdown(f'##### {region} Unique Projects')
+            st.altair_chart(donut.make_donut(round(region_metrics[region]['unique_projects']), 'unique_projects', colour2, False))
 
 # Assuming df is already loaded and cleaned before passing to show function
 # Example usage:
@@ -70,11 +62,3 @@ def calculate_metrics(total_df, filtered_df):
         "total_developers": total_developers,
         "new_developers": new_developers
     }
-    new_key.show(filtered_builds_df)
-
-    metrics = new_key.calculate_metrics(builds_df, filtered_builds_df)
-
-    st.metric("Number of Builds", metrics["number_of_builds"])
-    st.metric("New Projects Created", metrics["new_projects"])
-    st.metric("Total Developers", metrics["total_developers"])
-    st.metric("New Developers", metrics["new_developers"])
