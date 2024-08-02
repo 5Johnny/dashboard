@@ -1,33 +1,33 @@
-from files import donut
-import plotly.express as px
-import altair as alt
-import streamlit as st
+import pandas as pd
 
-def show(df, selected_colors):
-    colour1 = [selected_colors[3], selected_colors[5]]
-    colour2 = [selected_colors[2], selected_colors[4]]
-    amer_exposure = 0
-    emea_exposure = 0
-    apac_exposure = 0
-    if df.shape[0]:
-        amer_exposure = (df[df['region'] == 'AMER'].shape[0] / df.shape[0]) * 100
-        emea_exposure = (df[df['region'] == 'EMEA'].shape[0] / df.shape[0]) * 100
-        apac_exposure = (df[df['region'] == 'APAC'].shape[0] / df.shape[0]) * 100
+def calculate_new_projects(total_df, filtered_df):
+    # Convert dates to datetime if not already
+    total_df['date_of_build'] = pd.to_datetime(total_df['date_of_build'])
+    filtered_df['date_of_build'] = pd.to_datetime(filtered_df['date_of_build'])
+    
+    # Get the date range of the filtered dataset
+    start_date = filtered_df['date_of_build'].min()
+    end_date = filtered_df['date_of_build'].max()
+    
+    # Determine new projects
+    existing_projects_before_filter = total_df[total_df['date_of_build'] < start_date]['projname'].unique()
+    new_projects = filtered_df[~filtered_df['projname'].isin(existing_projects_before_filter)]['projname'].nunique()
+    
+    return new_projects
 
-    inners = st.columns(2)
-    with inners[0]:
-        st.markdown('##### AMER Exposure')
-        st.altair_chart(donut.make_donut(round(amer_exposure), 'New Users this month', colour2))
-        st.markdown('##### EMEA Exposure')
-        st.altair_chart(donut.make_donut(round(emea_exposure), 'New Users this month', colour1))
-        st.markdown('##### APAC Exposure')
-        st.altair_chart(donut.make_donut(round(apac_exposure), 'New Users this month', colour2))
-    with inners[1]:
-        print(df)
-        st.markdown('##### Dev Projects')
-        st.altair_chart(donut.make_donut(10, 'New Users this month', colour1, False))
-        st.markdown('##### Stg Builds')
-        st.altair_chart(donut.make_donut(34, 'New Users this month', colour2, False))
-        st.markdown('##### Metric 6')
-        st.altair_chart(donut.make_donut(50, 'New Users this month', colour1, False))
-        
+def calculate_new_developers(total_df, filtered_df):
+    # Convert dates to datetime if not already
+    total_df['date_of_build'] = pd.to_datetime(total_df['date_of_build'])
+    filtered_df['date_of_build'] = pd.to_datetime(filtered_df['date_of_build'])
+    
+    # Get the date range of the filtered dataset
+    start_date = filtered_df['date_of_build'].min()
+    end_date = filtered_df['date_of_build'].max()
+    
+    # Determine new developers
+    developer_first_appearances = total_df.groupby('user_id')['date_of_build'].min()
+    new_developers = developer_first_appearances[
+        (developer_first_appearances >= start_date) & (developer_first_appearances <= end_date)
+    ].count()
+    
+    return new_developers
